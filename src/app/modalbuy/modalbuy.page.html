@@ -1,0 +1,63 @@
+<ion-header fullscreen no-border>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+        <ion-button color="secondary" (click)="dismiss()">
+            <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <div>
+                  <ion-item>
+                      <ion-label position="floating">Quantity</ion-label>
+                      <ion-input type="number"  [(ngModel)]="unit" (ionChange)="valueChanged(unit)"></ion-input>
+                  </ion-item>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div>
+                  <ion-item>
+                      <ion-label position="floating">Est. CHF amount</ion-label>
+                      <ion-input type="number" [(ngModel)]="chfAmnt"></ion-input>
+                  </ion-item>
+                </div>
+              </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label>
+                      Order Type
+                    </ion-label>
+                    <ion-label>
+                        Market
+                    </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-item style="width:100%;">
+                <ion-col>
+                  <ion-label>Validity</ion-label>
+                </ion-col>
+                <ion-col>
+                    <ion-label>
+                        <h4>Good For Day</h4>
+                        <h4>22.2.2020</h4>
+                      </ion-label>
+                </ion-col>
+            </ion-item>
+        </ion-row>
+        
+    </ion-grid>
+</ion-content>
+<ion-footer>
+  <div class="footerBtn">
+      <ion-button expand="block" (click)="preview()">Preview</ion-button>
+  </div>
+</ion-footer>
