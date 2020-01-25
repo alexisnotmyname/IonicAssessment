@@ -30,7 +30,8 @@ export class HomePage {
       componentProps: {
         'price': this.crypto['pricing']['price'],
         'unit': this.unit
-      }
+      },
+      cssClass: 'half-modal'
     });
 
     modal.onDidDismiss()
